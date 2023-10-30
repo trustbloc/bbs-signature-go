@@ -73,7 +73,7 @@ func TestPublicKey_Marshal(t *testing.T) {
 	pubKeyUnmarshalled, err := bbs.UnmarshalPublicKey(pubKeyBytes)
 	require.NoError(t, err)
 	require.NotNil(t, pubKeyUnmarshalled)
-	require.Equal(t, pubKey, pubKeyUnmarshalled)
+	require.True(t, pubKey.PointG2.Equals(pubKeyUnmarshalled.PointG2))
 }
 
 func TestParseMattrKeys(t *testing.T) {
