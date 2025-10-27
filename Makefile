@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-
+export GOTOOLCHAIN=go1.25.0+auto
 .PHONY: all
 all: clean checks unit-test
 
